@@ -1,0 +1,17 @@
+Please find the details of the poc ProjectDetailsAnalysisTool
+
+INPUT FILES:1) 2GB CSV file
+                       2) Reference file
+NOTE:Reference file will contain the some of the keywords(say 10 to 11) those are in 2GB file
+
+1.Generate 2GB csv file containing following fields
+
+Project_Id,Project_Name,Base_Location,Project_Manager,Description,Mail_Id,Comment,Contact_Number,Swon_No,No_Members
+in which  Project_Id must be unique
+
+
+2.Match the keywords in the reference file with 2GB CSV file(in all the fields of every line) and produce the following outputs
+         1)Write the lines that contains the keyword to csv file and specify the path of the csv file in the console
+         2)Display the total count of the keyword in console for the user given input keyword.
+         3)If the file is to be processed at first time and it should display the output.
+         4)If the user want to view the count of keywords for the already processed file, displaying the counts is enough.

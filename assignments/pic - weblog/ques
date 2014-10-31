@@ -1,0 +1,21 @@
+------------------------WebLogAnalysis------------------------------
+
+1. Generate weblog in combined log format for one month data let it be for Jan 2011.
+note: requested url may have search key in some logs
+12.12.141.168 - - [05/Jan/2011:12:35:46 +1222] "www.facebook.com" 217 8377 "www.customerComplaints.in/home" "Mozilla/4.8 [en] (X11; U; SunOS 5.8 sun4m; Nav)"
+here request url is www.facebook.com
+in some cases it may be "www.facebook.com/search/keyword=abcc@yahoo.co.in"
+in some other case it may be "www.facebook.com/sessionid=1223a/account/resetpassword"
+but here in all cases after generation as above you should treat www.facebook.com/sessionid=1223a/account/resetpassword as source and www.facebook.com as URL
+---------------------------------------------------------------------
+			UseCases
+---------------------------------------------------------------------
+1. Get Top 10 urls and its count for the entire one month date you generated.
+2. Get Least 10 urls and its count for the entire one month date you generated.
+3. Get Top 10 urls and its count for a given date in that month by the user. 
+4. Get Top 10 search keywords and count for a given date.
+5. Get Top 3 OS used in the given date( ex:21st Jan 2011 )for a particular hour that user entered(ex:14hr dynamically given by the user)
+	i.e., for 14-15 hr (user's choice) top 3 OS must be populated.
+6. In the same way top 3 Browers for a given hour and,
+7. Get Top 10 urls that gives error status codes for a given hour.
+-----------------------------------------------------------------------

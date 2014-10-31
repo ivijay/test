@@ -1,0 +1,31 @@
+Tasks:
+------
+1.input data format ;
+
+globalCallID_callId|origLegCallIdentifier|destLegCallIdentifier|callingPartyNumber|originalCalledPartyNumber|finalCalledPartyNumber|Called_date|Start_time|End_time|lastRedirectDn|origCause_Value|dest_CauseValue|origMediaCap_payloadCapability|origMediaCap_Bandwidth|destMediaCap_payloadCapability|destMediaCap_Bandwidth
+
+Example:771|639|419|9944674758|9944661771|9944661771|2011-07-07|2011-07-07 13:58:16|2011-07-07 14:13:30|771|639|419|771|639|419
+
+**In this 4,5 and 6 columns represents that callingPartyNumber,originalCalledPartyNumber and finalCalledPartyNumber**
+
+2. Display the Call Summary of various service providers based on Date, Month and Year
+
+    It has to display in the format of;
+                     
+        ServiceProviderNumber    TotalNo.of.Calls    TotalDuration
+        ---------------------------------------------------------------
+        90303                2101604        1064471:12:57
+        95852                2160040        1094071:32:18
+
+3. Display the Consumers Call Summary for a Service Provider based on Date, Month and Year
+
+        PhoneNumber    TotalDuration
+        -----------------------------
+        9944610479    5126:13:52
+        9944610705    5033:47:05
+
+4. Display the Forwarded Call Summary of various service providers based on Date, Month and Year
+
+5. Display the Forwarded Call Summary for a Service Provider based on Date, Month and Year
+
+6. Display the Top 'n' of Customers for Regular and forwarded calls of a given service provider based on Date, Month and Year
