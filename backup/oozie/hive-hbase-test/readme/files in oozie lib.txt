@@ -1,0 +1,11 @@
+-rwxrwxrwx	HadoopUser	supergroup	1.57 MB	3	128 MB	guava-11.0.2.jar
+-rwxrwxrwx	HadoopUser	supergroup	896.88 KB	3	128 MB	hbase-client-0.98.1-cdh5.1.2.jar
+-rwxrwxrwx	HadoopUser	supergroup	425.41 KB	3	128 MB	hbase-common-0.98.1-cdh5.1.2.jar
+-rwxrwxrwx	HadoopUser	supergroup	31.51 KB	3	128 MB	hbase-hadoop-compat-0.98.1-cdh5.1.2.jar
+-rwxrwxrwx	HadoopUser	supergroup	72.34 KB	3	128 MB	hbase-hadoop2-compat-0.98.1-cdh5.1.2.jar
+-rwxrwxrwx	HadoopUser	supergroup	3.29 MB	3	128 MB	hbase-protocol-0.98.1-cdh5.1.2.jar
+-rwxrwxrwx	HadoopUser	supergroup	3.22 MB	3	128 MB	hbase-server-0.98.1-cdh5.1.2.jar
+-rwxrwxrwx	HadoopUser	supergroup	64.25 KB	3	128 MB	hive-hbase-handler-0.12.0-cdh5.1.2.jar
+-rwxrwxrwx	HadoopUser	supergroup	30.79 KB	3	128 MB	htrace-core-2.04.jar
+-rwxrwxrwx	HadoopUser	supergroup	946.31 KB	3	128 MB	mysql-connector-java.jar
+-rwxrwxrwx	HadoopUser	supergroup	1.28 MB	3	128 MB	zookeeper-3.4.5-cdh5.1.2.jar

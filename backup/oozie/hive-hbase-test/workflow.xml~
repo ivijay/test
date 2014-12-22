@@ -1,0 +1,38 @@
+<workflow-app name="WorkflowWithHiveAction2" xmlns="uri:oozie:workflow:0.1">
+    	<start to="hiveAction"/>
+ 	<action name="hiveAction">
+  		<hive xmlns="uri:oozie:hive-action:0.2">
+              		<job-tracker>172.20.95.108:8032</job-tracker>
+              		<name-node>hdfs://172.20.95.103:8020</name-node>
+			<job-xml>/user/463683/oozie/hive_hbase_test/hive-site.xml</job-xml>
+				<configuration>
+					<property>
+						<name>javax.jdo.option.ConnectionURL</name>
+						<value>jdbc:mysql://172.20.95.137</value>
+  					</property>
+					<property>
+						<name>mapred.job.queue.name</name>
+						<value>default</value>
+					</property>
+					 <property>
+						 <name>oozie.hive.defaults</name>
+						<value>/user/463683/oozie/hive_hbase_test/hive-default.xml.template</value>
+					</property>
+					<property>
+					        <name>oozie.service.WorkflowAppService.system.libpath</name>
+					        <value>/user/oozie/share/lib/lib_20140927141125</value>
+				   	 </property>
+				</configuration>
+   			<script>hivescripts.q</script>
+
+         	</hive>
+         	<ok to="end"/>
+         	<error to="fail"/>
+     	</action>
+  <kill name="fail">
+    <message>HIVE FAILED ERROR MESSAGE ${wf:errorMessage(wf:lastErrorNode())}]</message>
+  </kill>
+	<end name="end" />
+</workflow-app>
+
+

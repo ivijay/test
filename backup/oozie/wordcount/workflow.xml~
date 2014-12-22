@@ -1,0 +1,56 @@
+<workflow-app xmlns="uri:oozie:workflow:0.1" name="WorkflowRunnerTest">
+
+  <start to="intersection0"/>
+
+  <action name="intersection0">
+    <map-reduce>
+      <job-tracker>172.20.95.108:8032</job-tracker>
+      <name-node>hdfs://172.20.95.103:8020</name-node>
+
+      <prepare>
+        <delete path="hdfs://172.20.95.103:8020/user/463683/oozie/wordcount/out1"/>
+      </prepare>
+
+      <configuration>
+
+        <property> 
+          <name>mapred.job.queue.name</name>
+          <value>default</value>
+        </property>
+        <property>
+          <name>mapred.mapper.class</name>
+          <value>wordcount.WordcountMapper</value>
+        </property>
+        <property>
+          <name>mapred.reducer.class</name>
+          <value>wordcount.WordcountReducer</value>
+        </property>
+        <property>
+          <name>mapred.output.key.class</name>
+          <value>org.apache.hadoop.io.Text</value>
+        </property>
+        <property>
+          <name>mapred.output.value.class</name>
+          <value>org.apache.hadoop.io.IntWritable</value>
+        </property>
+        <property>
+          <name>mapred.input.dir</name>
+          <value>/user/463683/spark/twitter/AFINN111.txt</value>
+        </property>
+        <property>
+          <name>mapred.output.dir</name>
+          <value>/user/463683/oozie/wordcount/out1</value>
+        </property>
+      </configuration>
+    </map-reduce>
+
+    <ok to="end"/>
+    <error to="fail"/>
+  </action>
+
+  <kill name="fail">
+    <message>Map/Reduce failed, error message</message>
+  </kill>
+  <end name="end"/>
+
+</workflow-app>

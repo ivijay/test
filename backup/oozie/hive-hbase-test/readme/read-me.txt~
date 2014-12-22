@@ -1,0 +1,16 @@
+I have placed following files in HDFS /user/463683/oozie/hive_hbase_test
+-rwxrwxrwx	HadoopUser	supergroup	81.17 KB	3	128 MB	hive-default.xml.template
+-rwxrwxrwx	HadoopUser	supergroup	2 KB	3	128 MB	hive-site.xml
+-rw-r--r--	HadoopUser	supergroup	643 B	3	128 MB	hivescripts.q
+drwxrwxrwx	HadoopUser	supergroup	0 B	0	0 B	lib
+-rwxrwxrwx	HadoopUser	supergroup	963 B	3	128 MB	workflow.xml
+
+From the directory where job.properties is present I have run the command 
+oozie job -oozie http://172.20.95.107:11000/oozie -config job.properties -run
+
+
+useful oozie commands
+oozie job -oozie http://172.20.95.107:11000/oozie -info 0000005-141210145625223-oozie-oozi-W@hiveAction
+oozie job -oozie http://172.20.95.107:11000/oozie -info status
+oozie job -oozie http://172.20.95.107:11000/oozie admin -shareliblist
+

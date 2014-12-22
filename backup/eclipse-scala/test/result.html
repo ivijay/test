@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="10">
+</head>
+<body onload="setInterval(refreshiframe, 5000);">
+<h1 align="center">Realtime Twitter Sentiment Analytics</h1>
+<div style="width:100%;"> <!-- Main Div -->
+<div style="float:left; width:60%;">
+<h1>Top 5 hashtags</h1>
+<p1><b>(Occurance count,Keyword)</b></p1>
+<br></br>
+<iframe name="hashtop5" src="hashtags-top5.txt/part-00000" width="400" height="90" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" class="frame-area">
+</iframe>
+</div>
+<div style="float:right; width:40%; ">
+<h1>Least 5 hashtags</h1>
+<p1><b>(Occurance count,Keyword)</b></p1>
+<br></br>
+<iframe name="hashleast5" src="hashtags-least5.txt/part-00000" width="400" height="90" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" class="frame-area">
+</iframe>
+</div>
+</div>
+<h1>Popular Retweets</h1>
+<p1><b>(Occurance count,Tweet text)</b></p1>
+<br></br>
+<iframe name="hashleast5" src="retweets.txt/part-00000" width="1200" height="250" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" class="frame-area">
+</iframe>
+
+<h1>Tweets Collected</h1>
+<p1><b>(Tweet Sentiment,Tweet text)</b></p1>
+<br></br>
+<iframe name="tweets" src="tweets-collection.txt/part-00000" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" style="overflow: hidden; height: 100%;
+        width: 100%; position: absolute;" height="100%" width="100%" class="frame-area">
+</iframe>
+
+
+</body>
+</html>
+

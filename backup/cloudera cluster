@@ -1,0 +1,28 @@
+Cloudera
+---------
+jobtracker	http://172.20.95.108:8088/cluster
+oozie ui	http://172.20.95.107:11000/oozie/
+hdfs		http://172.20.95.103:50070
+job history	http://01hw508222.india.tcs.com:19888/jobhistory/about
+
+
+oozie wiki
+
+https://github.com/yahoo/oozie/wiki/Oozie-WF-use-cases
+https://blogs.oracle.com/datawarehousing/entry/building_simple_workflows_in_oozie
+http://www.jilles.net/perma/2014/05/28/setting-up-an-hadoop-oozie-coordinator-and-workflow/
+
+https://gist.github.com/airawat/6001806
+https://github.com/airawat/
+
+
+hbase
+http://sujee.net/tech/articles/hadoop/hbase-map-reduce-freq-counter/
+
+hadoop jar hdfs://172.20.95.103:8020/user/463683/oozie/wordcount/workflow-apps/sample-mr/lib/hadoop-examples-2.3.0-mr1-cdh5.1.2.jar WordCount /user/463683/spark/twitter/AFINN111.txt /user/463683/oozie/wordcount/out1
+
+
+yarn jar /home/HadoopUser/Desktop/wordcount.jar wordcount.Wordcount /user/463683/spark/twitter/AFINN111.txt /user/463683/oozie/wordcount/out1
+
+
+
